@@ -20,8 +20,8 @@ const Hero = () => {
   const { content } = usePageContent();
 
   // Get dynamic content with fallbacks
-  const heroTitle = content?.home?.heroTitle || "I'm Lara Chapman, Realtor® with Bliss Realty.";
-  const heroSubtitle = content?.home?.heroSubtitle || "Realtor®, investor, and home stager helping Phoenix Valley clients buy and sell with confidence.";
+  const heroTitle = content?.home?.heroTitle || "I'm Lara Chapman. Phoenix Valley REALTOR® with Bliss Realty.";
+  const heroSubtitle = content?.home?.heroSubtitle || "Phoenix market expertise specializing in relocation, first-time home buyers, and investor strategy from Central Phoenix to the East Valley.";
   const videoId = content?.home?.heroVideoId || 'DZfp99BamQk';
   const button1Text = content?.home?.heroButton1Text || 'Find Out What My Home is Worth';
   const button1Url = content?.home?.heroButton1Url || 'https://lstrep.co/0xcgPhSCLE';
@@ -184,7 +184,7 @@ const IntroBox = () => {
   const { content } = usePageContent();
 
   // Get dynamic content with fallback
-  const bioExcerpt = content?.home?.bioExcerpt || "I'm Lara Chapman, a native Phoenician and REALTOR® who brings together operational leadership, hands-on service, and real estate experience. My background in finance taught me how to lead teams and navigate complex decisions, and owning a massage therapy business deepened my ability to listen closely and support people through important moments. Combined with my investing and home staging experience, this gives me a well-rounded approach that is both strategic and deeply client-focused. I truly care about the people I serve, and I'm here to help you buy, sell, or invest with confidence and clarity.";
+  const bioExcerpt = content?.home?.bioExcerpt || "I'm Lara Chapman, a Phoenix Valley REALTOR® and native Phoenician. I work with first-time home buyers, relocation clients, and real estate investors across Central Phoenix to the East Valley. My background blends strategy, people skills, and real estate expertise. Before real estate, I held leadership roles in finance operations, and I've also owned a massage therapy practice for years. That combination has shaped how I work with clients. I know how to communicate clearly, build trust quickly, and guide people through big decisions when the stakes feel high. My investing background and staging experience also give me a strong sense of value, timing, and how to position a home well, which matters whether you're buying, selling, or building a portfolio. If you need a trusted advisor in the Phoenix real estate market, I'm here to guide you every step of the way.";
 
   return (
     <motion.section
@@ -210,7 +210,7 @@ const ServicesGrid = () => {
 
   // Get dynamic content with fallbacks
   const servicesTitle = content?.home?.servicesTitle || 'My Services';
-  const servicesSubtitle = content?.home?.servicesSubtitle || 'From buying your first home to building an investment portfolio, I provide comprehensive real estate services.';
+  const servicesSubtitle = content?.home?.servicesSubtitle || 'Real estate decisions are often some of the biggest financial moves you\'ll ever make. I bring strategy, strong negotiation, and honest guidance to every Phoenix Valley real estate transaction.';
 
   // Icon mapping
   const iconMap: { [key: string]: any } = {
@@ -225,28 +225,28 @@ const ServicesGrid = () => {
     {
       icon: 'HomeIcon',
       title: 'Buy',
-      description: 'Find your dream home with personalized guidance through the Phoenix Valley market.',
+      description: 'Searching is easy. Buying a home in Phoenix takes experience. I\'ll guide you step by step.',
       link: '/buy',
       internal: true
     },
     {
       icon: 'DollarSign',
       title: 'Sell',
-      description: 'Get top dollar for your home with strategic marketing and expert negotiation.',
+      description: 'Selling in Phoenix takes more than a sign. I combine smart pricing, professional home staging with Style & Staging, and strong negotiation to get your home sold.',
       link: '/sell',
       internal: true
     },
     {
       icon: 'Palette',
       title: 'Stage',
-      description: "Professional home staging services to showcase your property's best features.",
+      description: 'Staging changes everything. Better photos, more showings, and stronger offers. As a certified home stager, I help homes stand out.',
       link: 'https://www.styleandstaging.com',
       internal: false
     },
     {
       icon: 'TrendingUp',
       title: 'Invest',
-      description: 'Commercial real estate investment opportunities to help you diversify beyond residential.',
+      description: 'Commercial real estate investment opportunities to help you diversify beyond residential real estate.',
       link: 'https://www.orangedoorinvestmentgroup.com',
       internal: false
     }
@@ -438,8 +438,8 @@ const ClosingCTA = () => {
   const { content } = usePageContent();
 
   // Get dynamic content with fallbacks
-  const ctaTitle = content?.home?.ctaTitle || "Ready to talk about your goals? Let's connect.";
-  const ctaSubtitle = content?.home?.ctaSubtitle || "Whether you're buying, selling, or investing, I'm here to help you achieve your real estate dreams in the Phoenix Valley.";
+  const ctaTitle = content?.home?.ctaTitle || "Ready to make a move in the Phoenix real estate market? Let's talk.";
+  const ctaSubtitle = content?.home?.ctaSubtitle || "Reach out anytime. I'm happy to answer questions and talk through your next move.";
 
   return (
     <motion.section

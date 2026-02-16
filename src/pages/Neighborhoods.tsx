@@ -29,7 +29,7 @@ const NEIGHBORHOODS: Neighborhood[] = [
     id: '1',
     slug: 'mesa',
     title: 'Mesa',
-    description: "Mesa is one of the Valley's most eclectic and diverse cities, with deeply rooted communities and a creative spirit. It blends affordability with access to outdoor recreation, cultural amenities, and welcoming neighborhoods. You'll find everything from historic districts and mid-century homes to large master-planned communities.",
+    description: "Mesa is one of the Valley's most eclectic and diverse cities, with deeply rooted communities and a creative spirit. It blends affordability with access to outdoor recreation, cultural amenities, and welcoming neighborhoods. You'll find everything from historic districts and mid-century homes to large master-planned communities. ",
     video_url: 'https://www.youtube.com/watch?v=blxhocllSXk',
     highlights: [
       'Historic homes, master-planned communities, and 55+ neighborhoods',
@@ -38,17 +38,17 @@ const NEIGHBORHOODS: Neighborhood[] = [
       'Lower home prices than many other areas in the Valley'
     ],
     quick_facts: {
-      homeValues: 'Generally more affordable than Scottsdale or Paradise Valley; range from modest homes to luxury developments like Las Sendas and Eastmark.',
-      costOfLiving: 'Housing is more affordable than many Valley cities; sales tax is 8.3%. Diverse dining is mostly mid-range pricing from chains to family-owned spots and diverse ethnic eateries. Retail skews toward discount and mid-range with fewer luxury options.',
-      lifestyle: 'Mesa offers year-round outdoor activity with hiking, river sports, biking, and golf, plus a vibrant arts scene at the Mesa Arts Center and amphitheater. Its Asian District highlights the city\'s cultural diversity, while spring training baseball adds seasonal energy.'
+      homeValues: 'Generally more affordable than Scottsdale or Paradise Valley',
+      costOfLiving: 'Housing is more affordable than many Valley cities; sales tax is 8.3%',
+      lifestyle: 'Year-round outdoor activity with hiking, river sports, biking, and golfs'
     },
     didYouKnow: 'Mesa was founded in 1878 by Mormon pioneers who built canals based on ancient Hohokam designs - some of which still carry water today.',
-    schools: 'Mesa is served by Mesa Public Schools, Arizona\'s largest district, along with many charter and private school options. Mesa Public Schools offers a wide range of programs, from STEM to arts.',
+    schools: 'Mesa is served by Mesa Public Schools, Arizona\'s largest district, along with many charter and private school options.',
     summary: [
       { feature: 'Eclectic Mix', description: 'Historic homes, master-planned communities, and 55+ neighborhoods.' },
       { feature: 'Outdoors', description: 'Salt River, Usery Park, and mountain access nearby.' },
-      { feature: 'Cultural Life', description: 'Theaters including the Mesa Arts Center and Mesa Amphitheater, museums and spring training baseball.' },
-      { feature: 'Affordability', description: 'Lower home prices than many other areas in the Valley, with diverse housing options.' }
+      { feature: 'Cultural Life', description: 'Theaters including the Mesa Arts Center and Mesa Amphitheater.' },
+      { feature: 'Affordability', description: 'Lower home prices than many other areas in the Valley.' }
     ],
     ctaButtons: [
       { text: 'View the Mesa Market Report', url: '#' },
@@ -67,12 +67,12 @@ const NEIGHBORHOODS: Neighborhood[] = [
       'Mix of suburban comfort and lively downtown entertainment'
     ],
     quick_facts: {
-      homeValues: 'Range from older homes near downtown to newer builds in master-planned communities.',
-      costOfLiving: 'Moderate housing costs, with sales tax at 8.3%. Dining is mostly casual with some trendy restaurants in Downtown Gilbert and around San Tan Mall. Shopping is dominated by regional malls and mid-range retail; fewer luxury stores.',
-      lifestyle: 'Gilbert is accessible and approachable, with outdoor spaces like Riparian Preserve and Freestone Park, lively community events, and dining along Downtown Gilbert\'s restaurant row. Agritopia adds a unique walkable hub with farms, local businesses, and gathering spots.'
+      homeValues: 'Range from older homes near downtown to newer builds in master-planned communities',
+      costOfLiving: 'Moderate housing costs, with sales tax at 8.3%',
+      lifestyle: 'Accessible and approachable with outdoor spaces and community events'
     },
-    didYouKnow: 'Once nicknamed the "Hay Shipping Capital of the World," Gilbert\'s farming roots are still reflected in places like Agritopia and the Riparian Preserve.',
-    schools: 'Gilbert is served by Gilbert Public Schools and Higley Unified School District, along with charter and private schools. According to GreatSchools.org, many of the local schools are rated 8 or higher.',
+    didYouKnow: 'Once nicknamed the "Hay Shipping Capital of the World," Gilbert\'s farming roots are still reflected in places like Agritopia.',
+    schools: 'Gilbert is served by Gilbert Public Schools and Higley Unified School District.',
     summary: [
       { feature: 'Community Oriented', description: 'Local events, parks, and schools anchor Gilbert\'s connected way of life.' },
       { feature: 'Housing Variety', description: 'Older homes downtown + new builds.' },
@@ -299,8 +299,8 @@ const NeighborhoodsMain = () => {
   const { content } = usePageContent();
 
   // Get dynamic content with fallbacks
-  const pageTitle = content?.neighborhoods?.pageTitle || 'Phoenix Valley Neighborhoods';
-  const pageDescription = content?.neighborhoods?.pageDescription || 'Phoenix is a vibrant and diverse city with neighborhoods that cater to every lifestyle. Whether you\'re drawn to the historic charm of Central Phoenix, the luxury of Scottsdale, the strong-community atmosphere of Chandler, or the up-and-coming energy of the West Valley, there\'s a perfect community waiting for you. Each area offers its own unique character, amenities, and opportunities to create the life you\'ve always wanted in the Valley of the Sun.';
+  const pageTitle = content?.neighborhoods?.pageTitle || 'Phoenix Neighborhood Guides & East Valley Community Profiles';
+  const pageDescription = content?.neighborhoods?.pageDescription || 'Phoenix is a big, diverse market, and the neighborhood you choose makes a real difference in day-to-day life. From Central Phoenix to the East Valley, each area has its own mix of home styles, layout, access to major corridors, and nearby dining, shopping, and recreation. These neighborhood guides are designed to help you compare areas side by side so you can narrow your search with clarity and confidence.';
 
   useEffect(() => {
     const fetchNeighborhoods = async () => {
@@ -693,8 +693,8 @@ const NeighborhoodDetail = () => {
                       href={button.url}
                       {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                       className={`block w-full text-center px-4 py-3 rounded-lg font-medium transition-colors ${index === 0
-                          ? 'bg-blue-600 text-white hover:bg-blue-700'
-                          : 'border border-gray-300 text-gray-700 hover:bg-gray-50'
+                        ? 'bg-blue-600 text-white hover:bg-blue-700'
+                        : 'border border-gray-300 text-gray-700 hover:bg-gray-50'
                         }`}
                     >
                       {button.text}

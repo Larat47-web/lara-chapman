@@ -10,12 +10,12 @@ const iconMap: { [key: string]: any } = {
 
 // Default seller steps for fallback
 const defaultSellerSteps = [
-  { icon: 'DollarSign', title: 'Strategic Pricing Analysis', text: 'I analyze recent sales, current market conditions, and your home\'s unique features to price it competitively for maximum return.' },
-  { icon: 'Camera', title: 'Professional Staging & Photography', text: 'Transform your home with professional staging techniques and high-quality photography that showcases its best features.' },
-  { icon: 'TrendingUp', title: 'Comprehensive Marketing Strategy', text: 'Multi-channel marketing including MLS, social media, professional networks, and targeted advertising to reach qualified buyers.' },
-  { icon: 'FileText', title: 'Expert Negotiation', text: 'I handle all negotiations to secure the best possible terms, price, and timeline for your sale.' },
-  { icon: 'CheckCircle', title: 'Transaction Management', text: 'From contract to closing, I coordinate inspections, appraisals, and all paperwork to ensure a smooth process.' },
-  { icon: 'Key', title: 'Successful Closing', text: 'I\'m with you through closing day and beyond, ensuring all details are handled professionally.' }
+  { icon: 'DollarSign', title: 'Pricing Strategy That Matches the Phoenix Market', text: 'I analyze recent sales, current buyer demand, and your neighborhood comp, current Phoenix Valley market trends, and local behavior so it attracts offers instead of sitting.' },
+  { icon: 'Camera', title: 'Professional Staging & Presentation', text: 'I\'m a certified home stager through Style & Staging. I know what creates the "this is the one" feeling. Style & Staging produces your home so it looks best in photos and in person.' },
+  { icon: 'TrendingUp', title: 'Marketing That Creates Visibility', text: 'Your home is marketed online and on the MLS, with professional photography, targeted media, and targeted outreach to attract Phoenix Market Buyers, relocation clients, and out-of-state interest. When the marketing is right, showings follow quickly.' },
+  { icon: 'FileText', title: 'Negotiation To Protect Your Bottom Line', text: 'I negotiate more than price. I focus on repairs, timeline, contingencies, and terms so you stay in control of the deal.' },
+  { icon: 'CheckCircle', title: 'Strong Contract-to-Close Management', text: 'Once you\'re under contract, I stay on top of every moving part, including inspections, appraisal, title, and deadlines, so the deal doesn\'t drift.' },
+  { icon: 'Key', title: 'A Smooth Closing Process', text: 'You\'ll know what to expect, what\'s next, and how to stay prepared all the way to closing day. I coordinate with my trusted local professionals as the details stay on track.' }
 ];
 
 const Sell = () => {
@@ -31,45 +31,81 @@ const Sell = () => {
     {
       image: 'https://images.pexels.com/photos/2029695/pexels-photo-2029695.jpeg?auto=compress&cs=tinysrgb&w=800',
       room: 'Modern Kitchen',
-      description: 'Transformed with sleek white cabinetry, stainless appliances, and strategic lighting to create an inviting culinary space.'
+      description: 'Bright, white cabinetry, lights, and functional layout that feels clean and inviting. Built for family life or resale.'
     },
     {
       image: 'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=800',
       room: 'Spacious Living Room',
-      description: 'Clean lines, neutral tones, and carefully placed furniture create an open, welcoming atmosphere.'
+      description: 'A clean, welcoming layout that lets buyers see themselves living here, not a magazine spread.'
     },
     {
       image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800',
-      room: 'Grand Master Bedroom',
-      description: 'Luxurious retreat with elegant furnishings, sophisticated color palette, and premium bedding.'
+      room: 'Master Bedroom',
+      description: 'A light, neutral space. Buyers focus on layout, light, and how it feels, not furniture.'
     },
     {
       image: 'https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=800',
-      room: 'Luxury Bathroom',
-      description: 'Spa-like ambiance with modern fixtures, elegant vanity, and refined styling details.'
+      room: 'Outdoor Living',
+      description: 'Outdoor spaces matter in Phoenix. A clean patio or yard setup helps buyers imagine entertaining, relaxing, or just living here.'
     },
   ];
 
   const faqs = content?.sell?.faqs && content.sell.faqs.length > 0 ? content.sell.faqs : [
     {
-      question: 'How do you determine the right listing price for my home?',
-      answer: 'I conduct a comprehensive market analysis looking at recent sales of similar homes, current market conditions, and your home\'s unique features. This data-driven approach ensures we price your home competitively to attract buyers while maximizing your return.'
+      question: 'How do you determine the right listing price for my home in the Phoenix area?',
+      answer: 'Pricing a home correctly is part math and part strategy. I look at recent comparable sales, current active competition, buyer demand, and neighborhood trends. Then I factor in condition, upgrades, layout, and presentation. The goal isn\'t just to pick a number. It\'s to position your home so it attracts serious buyers and creates leverage during negotiations.'
     },
     {
-      question: 'What staging services do you provide?',
-      answer: 'I offer complete staging consultation including furniture arrangement, decluttering guidance, minor repairs recommendations, and professional photography coordination. For vacant homes, I can arrange furniture rental and full staging services.'
+      question: 'Do you offer home staging services across the Phoenix Valley?',
+      answer: 'Yes. I\'m also a professional home stager, and I work hand-in-hand with Style & Staging, a Phoenix-based vacant home staging company that services the entire Greater Phoenix area. Sometimes staging means full furniture and design. Other times it means a targeted plan using what you already have. Either way, the goal is the same: make your home photograph beautifully and show like something buyers want to compete for.'
     },
     {
-      question: 'How long does it typically take to sell a home?',
-      answer: 'Every home and neighborhood is different, so there isn\'t a one-size-fits-all answer. Timing depends on factors like current buyer demand, pricing, and how well a home is presented. To get the clearest picture, check out the market reports under the Neighborhood tab, where you can see up-to-date stats on how quickly homes are selling in your specific area.'
+      question: 'Do you recommend staging before listing to sell my home?',
+      answer: 'Yes, absolutely. Staging isn\'t decorating. It\'s marketing. It shapes the way buyers experience the home online and in person, and it often makes the difference between "this is nice" and "this is the one." This is especially true in competitive areas like Scottsdale, Arcadia, and Chandler, and in historic districts like Encanto Village, Roosevelt Row, and Willo in Phoenix, or Downtown Mesa, where unique layouts and older floor plans can confuse modern buyers. Staging helps buyers visualize how the home actually lives, not just what it looks like.'
     },
     {
-      question: 'What are your commission rates?',
-      answer: 'My commission structure is competitive and transparent. I believe in providing exceptional value through professional marketing, expert negotiation, and full-service support. Let\'s discuss your specific needs and I\'ll provide you with detailed information about costs and services.'
+      question: 'How long does it typically take to sell a home in the Valley of the Sun?',
+      answer: 'It depends on your location, price point, and how the home is positioned. Some homes sell quickly if they\'re priced correctly and show well from day one. Others sit because the strategy isn\'t aligned with what today\'s buyers expect. My job is to launch your listing with strong pricing, strong presentation, and a clear plan so you\'re not stuck waiting and wondering.'
     },
     {
-      question: 'Do you offer any guarantees?',
-      answer: 'While I can\'t guarantee a specific sale price or timeline (as these depend on market conditions), I do guarantee professional service, transparent communication, and dedicated advocacy for your interests throughout the entire process.'
+      question: 'Should I make repairs or updates before listing?',
+      answer: 'Sometimes yes, but not always. I\'ll walk through your home with a seller\'s eye and tell you what\'s worth doing and what\'s a waste of money. In many cases, small fixes, paint touch-ups, and presentation changes can have a bigger impact than expensive renovations. If you want to sell efficiently, we focus on the upgrades buyers actually notice.'
+    },
+    {
+      question: 'What\'s the common REALTOR® commission in Phoenix?',
+      answer: 'Commission structures vary, and there\'s no one-size-fits-all answer. I\'m transparent about how I work and what my services include. Let\'s talk through your goals, your home, and your timeline, and I\'ll walk you through the full breakdown so you know exactly what to expect.'
+    },
+    {
+      question: 'What happens if my home doesn\'t sell?',
+      answer: 'If your home isn\'t selling, it usually comes down to one of three things: price, presentation, or positioning. We\'ll reassess the strategy, adjust what needs to change, and relaunch with a stronger plan. I don\'t let listings sit and go stale. If something isn\'t working, we fix it.'
+    },
+    {
+      question: 'How do you market homes beyond the MLS?',
+      answer: 'The MLS is only the starting point. I market homes across major real estate platforms, social media, and direct outreach. That includes online exposure and real-world visibility. The goal is to get your home in front of qualified buyers fast, especially in high-demand areas across Central Phoenix and the East Valley.'
+    },
+    {
+      question: 'What areas do you serve in the Phoenix Metro?',
+      answer: 'I work across the Phoenix Valley, including Arcadia, Midtown Phoenix, Downtown Phoenix, Uptown Phoenix, South Phoenix, Sunnyslope, Ahwatukee, Paradise Valley, Scottsdale, Tempe, Mesa, Chandler, Gilbert, and Apache Junction. If you\'re not sure if I cover your neighborhood, just reach out.'
+    },
+    {
+      question: 'Can you sell my home if it is vacant?',
+      answer: 'Yes, and this is where staging becomes even more important. Vacant homes often feel colder in photos and harder for buyers to visualize. That\'s why I partner with Style & Staging, the best Phoenix Valley vacant home staging team that specializes in making empty homes feel high-end, warm, and memorable.'
+    },
+    {
+      question: 'What makes your selling strategy different?',
+      answer: 'I don\'t just list homes and wait. I position them. That means pricing with purpose, staging for impact, and marketing with intention. I also stay involved through the entire process, from the first consultation to closing day, so nothing falls through the cracks.'
+    },
+    {
+      question: 'Do you offer a free home value estimate?',
+      answer: 'Yes. I provide a detailed home value estimate based on current market data, recent sales, and your home\'s specific features. It\'s free, no-obligation, and gives you a clear starting point for planning your sale.'
+    },
+    {
+      question: 'What happens if the buyer backs out?',
+      answer: 'No need to panic. Buyers do cancel occasionally, and I\'ll be right by your side to make sure the contract is handled correctly and your interests are protected. The important thing is not to take it personally. Many cancellations happen during the inspection period, and it can be due to the property, financing, or something specific to that buyer. If a buyer walks away outside of their contingency timelines, earnest money may be at risk. Either way, I\'ll explain exactly where you stand and help you move forward quickly so your home doesn\'t lose momentum.'
+    },
+    {
+      question: 'Should I accept the first offer?',
+      answer: 'Sometimes the first offer is the right one, especially if it\'s clean and the buyer is well-qualified. But I look at more than price. I review financing strength, contingencies, timelines, and how likely the deal is to actually close. My job is to walk you through the details so you can choose the offer that truly makes the most sense, not just the one that looks best on paper.'
     }
   ];
 
@@ -80,21 +116,21 @@ const Sell = () => {
   }
 
   // Get dynamic content with fallbacks
-  const introTitle = content?.sell?.introTitle || 'Selling Your Home with Lara';
-  const introText = content?.sell?.introText || 'Get top dollar for your home with strategic pricing, professional staging, and expert marketing that reaches qualified buyers.';
-  const stepsTitle = content?.sell?.stepsTitle || 'Your Home Selling Journey';
+  const introTitle = content?.sell?.introTitle || 'Sell Your Home in Phoenix with Lara Chapman';
+  const introText = content?.sell?.introText || 'Smart pricing, strong marketing, and professional staging that gets buyers through the door';
+  const stepsTitle = content?.sell?.stepsTitle || 'My Selling Strategy';
   const stepsSubtitle = content?.sell?.stepsSubtitle || 'I guide you through every step of the selling process to maximize your home\'s value and minimize stress.';
   const stagingTitle = content?.sell?.stagingTitle || 'Staging Examples';
-  const stagingSubtitle = content?.sell?.stagingSubtitle || 'See how professional staging transforms spaces to appeal to potential buyers.';
-  const stagingCta = content?.sell?.stagingCta || 'Professional staging can help your home sell faster and for a higher price. As a certified home stager, I can help you prepare your home to make the best possible impression on buyers.';
-  const stagingButtonText = content?.sell?.stagingButtonText || 'Learn More About Staging Services';
+  const stagingSubtitle = content?.sell?.stagingSubtitle || 'See how home staging changes how buyers see your home, and how fast it sells.';
+  const stagingCta = content?.sell?.stagingCta || 'In the Phoenix market, first impressions happen fast. Professional home staging helps buyers connect emotionally, and that connection creates the "this is the one" feeling. Style & Staging produces your home so it looks best in photos and in person. Staging services are available through Style & Staging, one of the Valley\'s top-rated home staging teams for residential listings.';
+  const stagingButtonText = content?.sell?.stagingButtonText || 'Explore Style & Staging';
   const stagingButtonUrl = content?.sell?.stagingButtonUrl || 'https://styleandstaging.com';
   const resourcesTitle = content?.sell?.resourcesTitle || 'Helpful Resources';
   const resourcesSubtitle = content?.sell?.resourcesSubtitle || 'Download free guides and tools to help you prepare for selling your home.';
   const faqTitle = content?.sell?.faqTitle || 'Frequently Asked Questions';
-  const faqSubtitle = content?.sell?.faqSubtitle || 'Get answers to common questions about selling your home in the Phoenix Valley.';
-  const ctaTitle = content?.sell?.ctaTitle || 'Ready to Sell Your Home?';
-  const ctaText = content?.sell?.ctaText || 'Get a free, no-obligation home value estimate and learn how I can help you achieve your selling goals.';
+  const faqSubtitle = content?.sell?.faqSubtitle || 'Straight answers to the most common questions homeowners ask before selling in the Phoenix Valley.';
+  const ctaTitle = content?.sell?.ctaTitle || 'Thinking of selling?';
+  const ctaText = content?.sell?.ctaText || 'Call me. I\'m happy to walk you through your options and give you a clear plan. No pressure. Just honest advice.';
   const ctaButtonText = content?.sell?.ctaButtonText || 'Request a Free Home Value Estimate Today';
   const ctaButtonUrl = content?.sell?.ctaButtonUrl || 'https://www.highway.ai/app/homereport/register/dTfLtaKXS3?creationSource=signup_link';
 

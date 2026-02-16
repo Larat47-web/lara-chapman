@@ -66,7 +66,9 @@ const Navigation = () => {
       { label: 'Sell', path: '/sell', isExternal: false },
       { label: 'Neighborhoods', path: '/neighborhoods', isExternal: false },
       { label: 'Calculators', path: '/calculators', isExternal: false },
-      { label: 'Contact', path: '/contact', isExternal: false }
+      { label: 'Contact', path: '/contact', isExternal: false },
+      { label: 'Resources', path: '/resources', isExternal: false },
+      { label: 'Blog', path: '/blog', isExternal: false }
     ];
 
   const navLinks = menuItems.map(item => ({
@@ -186,9 +188,9 @@ const Footer = () => {
   const { content } = usePageContent()
 
   const footerLogoText = content?.footer?.logoText || 'Lara Chapman'
-  const footerTagline = content?.footer?.tagline || 'Realtor®, investor, and home stager helping Phoenix Valley clients buy and sell with confidence.'
+  const footerTagline = content?.footer?.tagline || 'Phoenix Valley REALTOR® specializing in relocation, first-time buyers, and investor strategy from Central Phoenix to the East Valley.'
   const copyrightText = content?.footer?.copyrightText || '© 2025 Lara Chapman, Realtor | Bliss Realty'
-  const disclaimerText = content?.footer?.disclaimerText || 'The data relating to real estate for sale on this web site comes in part from the Internet Data Exchange (IDX) program...'
+  const disclaimerText = content?.footer?.disclaimerText || 'The data relating to real estate for sale on this web site comes in part from the Internet Data Exchange (IDX) program of the Arizona Regional Multiple Listing Service, Inc. Real estate listings held by brokerage firms other than Bliss Realty are marked with the IDX logo. Information about a property\'s sale history, including the listing and sale prices, may be found on the property details page. All information provided is deemed reliable but is not guaranteed and should be independently verified. Some properties which appear for sale on this web site may subsequently have sold and may no longer be available. The listing broker\'s offer of compensation is made only to participants of the MLS where the listing is filed.'
 
   const facebookUrl = content?.contact?.facebookUrl || 'https://www.facebook.com/LaraLovesPhoenix'
   const instagramUrl = content?.contact?.instagramUrl || 'https://www.instagram.com/laralovesphoenix/'
@@ -198,8 +200,8 @@ const Footer = () => {
 
   const email = content?.footer?.email || content?.contact?.email || 'KeysPlease@LaraLovesPhoenix.com'
   const phone = content?.footer?.phone || content?.contact?.phone || '(602) 405-8002'
-  const address = content?.footer?.address || content?.contact?.address || 'Phoenix, Arizona'
-  const officeHours = content?.footer?.officeHours || content?.contact?.officeHours || 'Monday - Friday: 9:00 AM - 6:00 PM'
+  const address = content?.footer?.address || content?.contact?.address || 'Serving Central Phoenix to the East Valley, including Arcadia, Paradise Valley, Scottsdale, Tempe, Mesa, Chandler, Ahwatukee, Gilbert, and Apache Junction.'
+  const officeHours = content?.footer?.officeHours || content?.contact?.officeHours || 'Monday - Saturday: 9:00 AM - 6:00 PM'
 
   const quickLinksTitle = content?.footer?.quickLinksTitle || 'Quick Links'
   const resourcesTitle = content?.footer?.resourcesTitle || 'Resources'
@@ -215,7 +217,9 @@ const Footer = () => {
       { label: 'Buy a Home', path: '/buy', isExternal: false },
       { label: 'Search Homes', path: 'https://search.blissrealtyinvestment.com/idx/search/advanced?agentHeaderID=15891149', isExternal: true },
       { label: 'Sell Your Home', path: '/sell', isExternal: false },
-      { label: 'Neighborhoods', path: '/neighborhoods', isExternal: false }
+      { label: 'Neighborhoods', path: '/neighborhoods', isExternal: false },
+      { label: 'Resources', path: '/resources', isExternal: false },
+      { label: 'Blog', path: '/blog', isExternal: false }
     ];
 
   const resourceLinks = content?.footer?.resourceLinks && content.footer.resourceLinks.length > 0

@@ -6,19 +6,57 @@ const About = () => {
 
   // Get dynamic content with fallbacks
   const pageTitle = content?.about?.pageTitle || 'Meet Lara Chapman';
-  const pageSubtitle = content?.about?.pageSubtitle || 'Your trusted partner in Phoenix Valley real estate';
-  const fullBio = content?.about?.fullBio || `I'm proud to be a native Phoenician and Realtor® with Bliss Realty. I've watched the Valley of the Sun grow and evolve into one of the most desirable places to live in the country. My deep roots in this community give me unique insights into neighborhood trends, market dynamics, and the lifestyle that makes Phoenix special.
+  const pageSubtitle = content?.about?.pageSubtitle || 'Experienced Phoenix real estate advisor known for strategy and follow-through.';
+  const fullBio = content?.about?.fullBio || `I'm Lara Chapman, a Phoenix Valley REALTOR® and native Phoenician serving clients from Central Phoenix to the East Valley. I've lived here my whole life, and I genuinely love this market. Not just because Phoenix is growing, but because real estate here creates real opportunity. For families, for first-time buyers, and for people trying to build long-term wealth.
 
-My journey to real estate began with dual business degrees from Arizona State University, where I developed a strong foundation in financial analysis and market evaluation. This background allows me to help clients make informed decisions about what is often their largest investment. While in school, I worked in a variety of service roles that taught me the value of hard work and communication. I went on to a career in finance and operations management, and later built my own massage therapy practice, an experience that taught me the importance of listening, understanding individual needs, and providing personalized care. These skills translate perfectly to real estate, where every client has unique circumstances and dreams.
+If you're relocating to Arizona, buying your first home, or investing in Phoenix real estate, my goal is simple. I want you to feel informed, supported, and confident in your decision.
 
-Along the way, I began investing in real estate. First with long-term rentals, then vacation properties, then fix-and-flips. With every project my passion for creating and connecting people to fantastic homes grew stronger. That same journey also introduced me to home staging. It developed naturally from my love of hospitality, interior design and understanding of how presentation impacts perception. I've seen firsthand how proper staging can transform a property, helping it sell faster and for more money.
+Why Clients Work With Me
 
-Today, I combine all these experiences as a full-service Realtor® with Bliss Realty. Whether you're a first-time homebuyer, a growing family needing more space, or an investor building a portfolio, I bring expertise, integrity, and genuine care to every transaction.`;
+Real estate is rarely just a transaction. It's usually tied to a bigger life moment. A move, a new job, a new chapter, a divorce, a growing family, a parent downsizing, or a financial goal that matters.
+
+My clients don't come to me because they want a pushy salesperson. They come to me because they want a Realtor who listens, communicates clearly, and knows how to guide them when the decision feels big.
+
+That's the type of professional I've always been.
+
+My Background (And Why It Matters in Real Estate)
+
+Before I became a REALTOR®, I worked in finance and operations leadership, which trained me to think strategically and stay organized when decisions are complex. I learned how to manage details, negotiate effectively, and follow through.
+
+I also own a massage therapy practice, and that experience shaped a completely different side of how I work. It taught me how to build trust quickly, how to listen closely, and how to communicate clearly when someone is overwhelmed or unsure of what they need.
+
+That combination is rare. Strategy and structure on one side, and real human connection on the other. But that's exactly what clients need when they're making one of the biggest financial decisions of their lives.
+
+Real Estate Investing + Staging Experience
+
+I've been investing in real estate for years, and that gives me a different perspective than many traditional agents. I understand value, risk, and exit strategy. I know how investors think, and I know what makes a deal work.
+
+I'm also a professional home stager with Style & Staging, based in Scottsdale, and I've seen firsthand how much presentation impacts a sale. Staging isn't about decorating. It's marketing strategy that sells. It shapes photography, showings, and the emotional response buyers have the moment they walk through the door.
+
+When you combine investing knowledge with staging strategy, you get something powerful. You get a Realtor who understands both numbers and buyer psychology.
+
+What It's Like to Work With Me
+
+I'm direct, calm, and communicative. I don't disappear, and I don't leave clients guessing. You'll always know what's happening, what the options are, and what I recommend.
+
+I'll give you honest feedback. I'll tell you what I would do if it were my own money or my own home. And I'll help you make decisions based on facts, not pressure.
+
+Whether you're buying a home in Phoenix, selling a property, or trying to make an investment decision, you deserve a Realtor who treats the process like it matters.
+
+Because it does.
+
+Areas I Serve
+
+I work with clients across the Phoenix Valley, from Central Phoenix to the East Valley, including:
+
+Arcadia • Midtown Phoenix • Downtown Phoenix • Uptown Phoenix • South Phoenix • Sunnyslope • Ahwatukee • Paradise Valley • Scottsdale • Tempe • Mesa • Chandler • Gilbert • Apache Junction
+
+If you're not sure whether I cover your area, reach out. Chances are, I do.`;
 
   const philosophyTitle = content?.about?.philosophyTitle || "My Commitment to You";
-  const philosophyText = content?.about?.philosophyText || "Real estate is more than just buying and selling property—it's about helping people transition to new chapters in their lives. I'm committed to making that transition as smooth, successful, and stress-free as possible.";
-  const lifestyleTitle = content?.about?.lifestyleTitle || 'Living the Phoenix Valley Dream';
-  const lifestyleText = content?.about?.lifestyleText || 'From desert hiking trails to world-class dining, let me help you find your perfect place in this incredible community.';
+  const philosophyText = content?.about?.philosophyText || "You'll get honest advice, quick communication, and a real plan. I'll tell you what I'd do if it were my own home, and I'll be in your corner the entire way.";
+  const lifestyleTitle = content?.about?.lifestyleTitle || 'Not sure where to start in Phoenix?';
+  const lifestyleText = content?.about?.lifestyleText || 'I\'ll help you narrow down Phoenix neighborhoods based on lifestyle, commute, and what matters most to you.';
 
   // Split bio into paragraphs
   const bioParagraphs = fullBio.split('\n\n').filter((p: string) => p.trim());

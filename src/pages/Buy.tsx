@@ -13,7 +13,7 @@ const iconMap: { [key: string]: any } = {
 const SearchBar = () => {
   const { content } = usePageContent();
 
-  const buttonText = content?.buy?.searchButtonText || 'Search Homes for Sale';
+  const buttonText = content?.buy?.searchButtonText || 'SEARCH HOMES IN PHOENIX';
   const buttonUrl = content?.buy?.searchButtonUrl || 'https://search.blissrealtyinvestment.com/idx/search/advanced?agentHeaderID=15891149';
 
   return (
@@ -37,12 +37,12 @@ const SearchBar = () => {
 
 // Default steps for fallback
 const defaultSteps = [
-  { icon: 'FileText', title: 'Understanding Your Goals', text: 'We start with a detailed consultation to understand your needs, timeline, and budget.' },
-  { icon: 'Search', title: 'Tailored Property Search', text: 'I create a customized search based on your criteria and send you listings as they hit the market.' },
-  { icon: 'Eye', title: 'Guided Property Showings', text: 'Together, we tour properties with a critical eye, discussing pros, cons, and market positioning.' },
-  { icon: 'FileText', title: 'Strategic Negotiation', text: 'I leverage market knowledge and negotiation skills to get you the best possible terms.' },
-  { icon: 'Key', title: 'Managing Transaction Details', text: 'From inspections to appraisals, I coordinate all aspects to ensure a smooth process.' },
-  { icon: 'Key', title: 'Closing & Beyond', text: 'I\'m with you through closing and available for any post-purchase questions or needs.' }
+  { icon: 'FileText', title: 'First Step: The Buyer Consultation and Onboarding Session', text: 'We start with a Buyer Strategy Meeting where we talk through your goals, timeline, and what you\'re looking for. I\'ll walk you through the Arizona buying process, explain how I work, and go over the benefits of my VIP Buyer Program. Once you\'re ready, we\'ll handle the initial paperwork and start your home search with a clear plan.' },
+  { icon: 'Search', title: 'MLS Home Search Setup', text: 'I build a custom MLS search based on your criteria and send listings as soon as they hit the market, so you\'re seeing the best options in real time.' },
+  { icon: 'Eye', title: 'Guided Property Showings', text: 'We tour homes with a critical eye. I\'ll point out pros, red flags, resale factors, and what matters most in today\'s Phoenix market.' },
+  { icon: 'FileText', title: 'Strategic Negotiation', text: 'When it\'s time to write an offer, I\'ll explain your options and how price, terms, and contingencies affect your position. I\'ll share my insight, then we\'ll decide how you want to move forward. From there, I\'ll write the offer exactly as you\'d like.' },
+  { icon: 'Key', title: 'Transaction Management', text: 'From inspections to appraisal to repairs, I coordinate the details and keep everything moving so you don\'t get blindsided by surprises.' },
+  { icon: 'Key', title: 'Closing Day + VIP Buyers Program', text: 'I\'ll guide you through closing day with clear communication and no surprises. I coordinate with my trusted local team to keep everything on track. After closing, you\'re in my VIP Buyer Program for life.' }
 ];
 
 const BuyerSteps = () => {
@@ -53,8 +53,8 @@ const BuyerSteps = () => {
     ? content.buy.steps
     : defaultSteps;
 
-  const stepsTitle = content?.buy?.stepsTitle || 'Your Home Buying Journey';
-  const stepsSubtitle = content?.buy?.stepsSubtitle || 'I guide you through every step of the process, making home buying as smooth and successful as possible.';
+  const stepsTitle = content?.buy?.stepsTitle || 'Buying a Home in the Greater Phoenix Area, Step by Step';
+  const stepsSubtitle = content?.buy?.stepsSubtitle || 'I\'ll guide you through each step, from the first showing to closing day, so you can buy with a clear plan and no surprises.';
 
   return (
     <motion.section
@@ -123,9 +123,9 @@ const NeighborhoodExploration = () => {
   const { content } = usePageContent();
 
   // Get dynamic content with fallbacks
-  const title = content?.buy?.neighborhoodTitle || 'Explore Phoenix Valley Neighborhoods';
-  const text = content?.buy?.neighborhoodText || 'Every community in the Valley has its own character, lifestyle, and price points. Explore my neighborhood guides to find the area that feels like home.';
-  const buttonText = content?.buy?.neighborhoodButtonText || 'View Neighborhood Guides';
+  const title = content?.buy?.neighborhoodTitle || 'Explore Central Phoenix and East Valley Neighborhoods';
+  const text = content?.buy?.neighborhoodText || 'From historic districts to family-friendly suburbs, every part of the Phoenix Valley has its own vibe, commute, and price range. Use these neighborhood guides to find the area that fits your lifestyle. Neighborhoods featured: Arcadia / Biltmore • Encanto Village • Uptown Phoenix • Paradise Valley • North Scottsdale • North Tempe / South Scottsdale • Gilbert • Mesa • South Tempe / Chandler / Ahwatukee';
+  const buttonText = content?.buy?.neighborhoodButtonText || 'Explore Neighborhood Guides';
   const buttonUrl = content?.buy?.neighborhoodButtonUrl || '/neighborhoods';
 
   return (
@@ -168,15 +168,15 @@ const ResourcesSection = () => {
     document.body.removeChild(link)
   }
 
-  const resourcesTitle = content?.buy?.resourcesTitle || 'Helpful Resources';
-  const resourcesSubtitle = content?.buy?.resourcesSubtitle || 'Tools and information to help you make informed decisions throughout your home buying journey.';
-  const ctaButtonText = content?.buy?.ctaButtonText || 'Start Your Home Search Today';
+  const resourcesTitle = content?.buy?.resourcesTitle || 'Phoenix Home Buying Resources';
+  const resourcesSubtitle = content?.buy?.resourcesSubtitle || 'Use these free tools to estimate payments, download my Phoenix home buying guide, and track local market trends.';
+  const ctaButtonText = content?.buy?.ctaButtonText || 'Browse Phoenix Valley Listings';
   const ctaButtonUrl = content?.buy?.ctaButtonUrl || 'https://search.blissrealtyinvestment.com/idx/search/advanced?agentHeaderID=15891149';
 
   const resources = content?.buy?.resources && content.buy.resources.length > 0 ? content.buy.resources : [
     {
-      icon: 'Home',
-      title: 'Home Buying Guide',
+      icon: 'FileText',
+      title: 'Phoenix Home Buying Guide (Free Download)',
       description: 'Download my comprehensive guide to buying your home in the Phoenix Valley.',
       buttonText: 'Download Guide',
       buttonUrl: '/buyers guide.pdf',
@@ -294,8 +294,8 @@ const Buy = () => {
 
   // Get dynamic content with fallbacks
   const introTitle = content?.buy?.introTitle || 'Buying a Home in the Phoenix Valley';
-  const introText = content?.buy?.introText || 'Get access to the same MLS database that Realtors® use, updated every 15 minutes with the most accurate and up-to-date information available.';
-  const mlsDescription = content?.buy?.mlsDescription || 'This is the same MLS Realtors® use — updated every 15 minutes and more accurate than Zillow, Realtor.com, or other consumer sites. Get the real story on pricing, availability, and market trends with professional-grade data.';
+  const introText = content?.buy?.introText || 'Real-time Phoenix Valley MLS listings, updated every 15 minutes, plus local guidance when you\'re ready to tour and make an offer.';
+  const mlsDescription = content?.buy?.mlsDescription || 'You\'re searching the same MLS database Realtors® use, updated every 15 minutes with the most accurate listing details available.';
 
   return (
     <div className="py-24 px-6">
