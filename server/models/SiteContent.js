@@ -260,6 +260,35 @@ const siteContentSchema = new mongoose.Schema({
                     isDownload: false
                 }
             ]
+        },
+        faqTitle: {
+            type: String,
+            default: 'Frequently Asked Questions'
+        },
+        faqSubtitle: {
+            type: String,
+            default: 'Get answers to common questions about buying a home in the Phoenix area.'
+        },
+        faqs: {
+            type: [{
+                question: { type: String, required: true },
+                answer: { type: String, required: true }
+            }],
+            default: []
+        },
+        commitmentTitle: {
+            type: String,
+            default: 'My Commitment To You'
+        },
+        commitmentPoints: {
+            type: [String],
+            default: [
+                'Proactive updates so you\'re never left wondering what\'s next',
+                'Phoenix market insight from a native Phoenician, not Zillow guesses or outdated info',
+                'Honest guidance so you can make confident decisions without feeling pressured',
+                'Smart negotiation strategy that protects your interests and strengthens your offer',
+                'A trusted local team of professionals to support you before closing and long after you move in'
+            ]
         }
     },
 

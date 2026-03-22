@@ -1,9 +1,8 @@
-import React from 'react';
 import { Facebook, Instagram, Linkedin, MapPin, Award, Users } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2F4F4F] text-white py-12 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#1b6884] text-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -33,12 +32,17 @@ const Footer = () => {
               <a href="#" className="text-white/70 hover:text-[#E67E22] transition-colors duration-200">
                 <Instagram size={24} />
               </a>
+              <a href="https://www.tiktok.com/@laralovesphoenix" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-[#E67E22] transition-colors duration-200">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.7a8.16 8.16 0 0 0 4.76 1.52v-3.4a4.85 4.85 0 0 1-1-.13z" />
+                </svg>
+              </a>
               <a href="#" className="text-white/70 hover:text-[#E67E22] transition-colors duration-200">
                 <Linkedin size={24} />
               </a>
             </div>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4 font-playfair">Services</h4>
             <ul className="space-y-2 font-inter">
@@ -50,7 +54,7 @@ const Footer = () => {
               <li><a href="https://orangedoorinvestmentgroup.com" className="text-white/80 hover:text-[#E67E22] transition-colors duration-200">Investment Properties</a></li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4 font-playfair">Contact Info</h4>
             <div className="space-y-2 text-white/80 font-inter">
@@ -64,7 +68,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/60">
           <p className="font-inter">
             © 2025 Lara Chapman | Bliss Realty. All rights reserved. | Licensed Arizona Realtor® | Equal Housing Opportunity

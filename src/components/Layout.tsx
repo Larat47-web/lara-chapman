@@ -65,7 +65,6 @@ const Navigation = () => {
       { label: 'Search Homes', path: searchHomesUrl, isExternal: true },
       { label: 'Sell', path: '/sell', isExternal: false },
       { label: 'Neighborhoods', path: '/neighborhoods', isExternal: false },
-      { label: 'Calculators', path: '/calculators', isExternal: false },
       { label: 'Contact', path: '/contact', isExternal: false },
       { label: 'Resources', path: '/resources', isExternal: false },
       { label: 'Blog', path: '/blog', isExternal: false }
@@ -197,6 +196,7 @@ const Footer = () => {
   const twitterUrl = content?.contact?.twitterUrl || 'https://x.com/larablissr1'
   const youtubeUrl = content?.contact?.youtubeUrl || 'https://www.youtube.com/@LaraLovesPhoenix'
   const linkedinUrl = content?.contact?.linkedinUrl || 'https://www.linkedin.com/in/lara-chapman-b4b025357/'
+  const tiktokUrl = content?.contact?.tiktokUrl || 'https://www.tiktok.com/@laralovesphoenix'
 
   const email = content?.footer?.email || content?.contact?.email || 'KeysPlease@LaraLovesPhoenix.com'
   const phone = content?.footer?.phone || content?.contact?.phone || '(602) 405-8002'
@@ -236,7 +236,7 @@ const Footer = () => {
   const accessibilityLinkText = content?.footer?.accessibilityLinkText || 'Accessibility'
 
   return (
-    <footer className="bg-[#2A9D8F] text-white py-16">
+    <footer className="bg-[#1b6884] text-white py-16">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Logo & Tagline */}
@@ -247,12 +247,21 @@ const Footer = () => {
             <p className="text-white/90 mb-6">
               {footerTagline}
             </p>
-            <div className="flex space-x-4">
-              <a href={facebookUrl} target="_blank" rel="noopener noreferrer nofollow" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors" aria-label="Facebook"><Facebook size={20} /></a>
-              <a href={instagramUrl} target="_blank" rel="noopener noreferrer nofollow" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors" aria-label="Instagram"><Instagram size={20} /></a>
-              <a href={twitterUrl} target="_blank" rel="noopener noreferrer nofollow" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors" aria-label="X (formerly Twitter)"><Twitter size={20} /></a>
-              <a href={youtubeUrl} target="_blank" rel="noopener noreferrer nofollow" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors" aria-label="YouTube"><Youtube size={20} /></a>
-              <a href={linkedinUrl} target="_blank" rel="noopener noreferrer nofollow" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors" aria-label="LinkedIn"><Linkedin size={20} /></a>
+            <div className="mt-6 flex flex-col items-center gap-3">
+              <div className="flex justify-center gap-3">
+                <a href={facebookUrl} target="_blank" rel="noopener noreferrer nofollow" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors" aria-label="Facebook"><Facebook size={20} /></a>
+                <a href={instagramUrl} target="_blank" rel="noopener noreferrer nofollow" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors" aria-label="Instagram"><Instagram size={20} /></a>
+                <a href={tiktokUrl} target="_blank" rel="noopener noreferrer nofollow" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors" aria-label="TikTok">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.7a8.16 8.16 0 0 0 4.76 1.52v-3.4a4.85 4.85 0 0 1-1-.13z" />
+                  </svg>
+                </a>
+              </div>
+              <div className="flex justify-center gap-3">
+                <a href={twitterUrl} target="_blank" rel="noopener noreferrer nofollow" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors" aria-label="X (formerly Twitter)"><Twitter size={20} /></a>
+                <a href={youtubeUrl} target="_blank" rel="noopener noreferrer nofollow" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors" aria-label="YouTube"><Youtube size={20} /></a>
+                <a href={linkedinUrl} target="_blank" rel="noopener noreferrer nofollow" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors" aria-label="LinkedIn"><Linkedin size={20} /></a>
+              </div>
             </div>
           </div>
 

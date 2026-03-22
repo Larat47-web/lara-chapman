@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { DollarSign, Camera, TrendingUp, FileText, Key, CheckCircle, ChevronDown, ChevronUp, Search, Eye, Home, Star, Award, Target } from 'lucide-react'
 import { usePageContent } from '../hooks/usePageContent';
@@ -109,7 +110,26 @@ const Sell = () => {
     }
   ];
 
-  const resources = content?.sell?.resources && content.sell.resources.length > 0 ? content.sell.resources : [];
+  const resources = content?.sell?.resources && content.sell.resources.length > 0 ? content.sell.resources : [
+    {
+      icon: 'FileText',
+      title: 'Phoenix Home Selling Guide',
+      description: 'A practical Phoenix home selling guide that explains how to price, prepare, and sell your home in today\'s Phoenix real estate market.',
+      buttonText: 'Download the Phoenix Home Selling Guide',
+      buttonUrl: '/sellers guide.pdf',
+      isExternal: false,
+      isDownload: true
+    },
+    {
+      icon: 'DollarSign',
+      title: 'What is Your Home Worth?',
+      description: 'Get a quick home estimate based on recent local sales and current Phoenix market activity.',
+      buttonText: 'Get Estimate',
+      buttonUrl: 'https://www.highway.ai/app/homereport/register/dTfLtaKXS3?creationSource=signup_link',
+      isExternal: true,
+      isDownload: false
+    }
+  ];
 
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index)
@@ -263,16 +283,16 @@ const Sell = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-24"
+          className="py-16 bg-[#FAF9F6]"
         >
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-[#333333] mb-6 font-serif">{resourcesTitle}</h2>
-            <p className="text-xl text-[#555555] max-w-2xl mx-auto">
+            <p className="text-xl text-[#555555] max-w-lg mx-auto">
               {resourcesSubtitle}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {resources.map((resource, index) => {
               const IconComponent = iconMap[resource.icon] || FileText;
               return (
@@ -377,6 +397,17 @@ const Sell = () => {
                 )}
               </motion.div>
             ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-lg text-[#555555] mb-4">Have more questions?</p>
+            <p className="text-[#555555] mb-6">Visit my full Phoenix FAQ page for more answers, loan options, and buyer tips.</p>
+            <Link
+              to="/faq"
+              className="inline-block bg-[#2A9D8F] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#2A9D8F]/90 transition-colors"
+            >
+              View More Phoenix Market FAQs
+            </Link>
           </div>
         </motion.section>
 

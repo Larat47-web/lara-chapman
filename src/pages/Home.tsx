@@ -20,8 +20,8 @@ const Hero = () => {
   const { content } = usePageContent();
 
   // Get dynamic content with fallbacks
-  const heroTitle = content?.home?.heroTitle || "I'm Lara Chapman. Phoenix Valley REALTOR® with Bliss Realty.";
-  const heroSubtitle = content?.home?.heroSubtitle || "Phoenix market expertise specializing in relocation, first-time home buyers, and investor strategy from Central Phoenix to the East Valley.";
+  const heroTitle = content?.home?.heroTitle || "I'm Lara Chapman\nPhoenix Valley REALTOR®\nWith Bliss Realty";
+  const heroSubtitle = content?.home?.heroSubtitle || "Listing Specialist with Phoenix market expertise.\nStrategic Selling | Relocation | First-Time Buyers | Investor Strategy";
   const videoId = content?.home?.heroVideoId || 'DZfp99BamQk';
   const button1Text = content?.home?.heroButton1Text || 'Find Out What My Home is Worth';
   const button1Url = content?.home?.heroButton1Url || 'https://lstrep.co/0xcgPhSCLE';
@@ -138,7 +138,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-6xl font-bold text-white mb-6 font-serif leading-tight"
+          className="text-6xl font-bold text-white mb-6 font-serif leading-tight whitespace-pre-line"
         >
           {heroTitle}
         </motion.h1>
@@ -147,7 +147,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed"
+          className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed whitespace-pre-line"
         >
           {heroSubtitle}
         </motion.p>
@@ -184,7 +184,9 @@ const IntroBox = () => {
   const { content } = usePageContent();
 
   // Get dynamic content with fallback
-  const bioExcerpt = content?.home?.bioExcerpt || "I'm Lara Chapman, a Phoenix Valley REALTOR® and native Phoenician. I work with first-time home buyers, relocation clients, and real estate investors across Central Phoenix to the East Valley. My background blends strategy, people skills, and real estate expertise. Before real estate, I held leadership roles in finance operations, and I've also owned a massage therapy practice for years. That combination has shaped how I work with clients. I know how to communicate clearly, build trust quickly, and guide people through big decisions when the stakes feel high. My investing background and staging experience also give me a strong sense of value, timing, and how to position a home well, which matters whether you're buying, selling, or building a portfolio. If you need a trusted advisor in the Phoenix real estate market, I'm here to guide you every step of the way.";
+  const rawBioExcerpt = content?.home?.bioExcerpt || "I'm Lara Chapman, a Phoenix Valley REALTOR® and native Phoenician. I work with first-time home buyers, relocation clients, real estate investors, and home sellers across Central Phoenix to the East Valley.\n\nMy background blends strategy, people skills, and real estate expertise. Before real estate, I held leadership roles in finance operations, and I've also owned a massage therapy practice for years. That combination has shaped how I serve clients. I communicate clearly, build trust quickly, and guide people through big decisions when the stakes feel high.\n\nMy investing background and staging experience also give me a strong sense of value, timing, and how to position a home well, which matters whether you're buying, selling, or building a portfolio. If you need a trusted advisor in the Phoenix real estate market, I'm here to guide you every step of the way.";
+
+  const bioExcerpt = rawBioExcerpt.replace(/\\n/g, '\n');
 
   return (
     <motion.section
@@ -194,9 +196,9 @@ const IntroBox = () => {
       transition={{ duration: 0.8 }}
       className="py-24 px-6"
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         <div className="bg-white p-12 rounded-2xl shadow-md text-center">
-          <p className="text-lg text-[#555555] leading-relaxed">
+          <p className="text-lg text-[#555555] leading-relaxed whitespace-pre-line max-w-xl mx-auto">
             {bioExcerpt}
           </p>
         </div>
@@ -210,7 +212,7 @@ const ServicesGrid = () => {
 
   // Get dynamic content with fallbacks
   const servicesTitle = content?.home?.servicesTitle || 'My Services';
-  const servicesSubtitle = content?.home?.servicesSubtitle || 'Real estate decisions are often some of the biggest financial moves you\'ll ever make. I bring strategy, strong negotiation, and honest guidance to every Phoenix Valley real estate transaction.';
+  const servicesSubtitle = content?.home?.servicesSubtitle || 'Real estate decisions are some of the biggest financial moves you\'ll ever make.\nI bring strategy, negotiation, and clear guidance to every Phoenix Valley transaction.';
 
   // Icon mapping
   const iconMap: { [key: string]: any } = {
@@ -225,28 +227,28 @@ const ServicesGrid = () => {
     {
       icon: 'HomeIcon',
       title: 'Buy',
-      description: 'Searching is easy. Buying a home in Phoenix takes experience. I\'ll guide you step by step.',
+      description: 'Searching in Phoenix is easy. Choosing the right home takes strategy and timing. I\'ll guide you step by step.',
       link: '/buy',
       internal: true
     },
     {
       icon: 'DollarSign',
       title: 'Sell',
-      description: 'Selling in Phoenix takes more than a sign. I combine smart pricing, professional home staging with Style & Staging, and strong negotiation to get your home sold.',
+      description: 'Selling in Phoenix takes more than a sign. Smart pricing and marketing. Professional staging. Strong negotiation.',
       link: '/sell',
       internal: true
     },
     {
       icon: 'Palette',
       title: 'Stage',
-      description: 'Staging changes everything. Better photos, more showings, and stronger offers. As a certified home stager, I help homes stand out.',
+      description: 'Staging changes everything. Better photos, more showings and stronger offers. As a certified home stager, I help homes stand out.',
       link: 'https://www.styleandstaging.com',
       internal: false
     },
     {
       icon: 'TrendingUp',
       title: 'Invest',
-      description: 'Commercial real estate investment opportunities to help you diversify beyond residential real estate.',
+      description: 'Investing in Phoenix builds wealth. Commercial investment opportunities to diversify beyond residential real estate.',
       link: 'https://www.orangedoorinvestmentgroup.com',
       internal: false
     }
@@ -267,9 +269,11 @@ const ServicesGrid = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-[#333333] mb-6 font-serif">{servicesTitle}</h2>
-          <p className="text-xl text-[#555555] max-w-2xl mx-auto">
-            {servicesSubtitle}
-          </p>
+          <div className="space-y-1">
+            {servicesSubtitle.split('\n').map((line: string, i: number) => (
+              <p key={i} className="text-xl text-[#555555]">{line}</p>
+            ))}
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -438,8 +442,8 @@ const ClosingCTA = () => {
   const { content } = usePageContent();
 
   // Get dynamic content with fallbacks
-  const ctaTitle = content?.home?.ctaTitle || "Ready to make a move in the Phoenix real estate market? Let's talk.";
-  const ctaSubtitle = content?.home?.ctaSubtitle || "Reach out anytime. I'm happy to answer questions and talk through your next move.";
+  const ctaTitle = content?.home?.ctaTitle || "Ready to make a move in the\nPhoenix real estate market? Let's talk.";
+  const ctaSubtitle = content?.home?.ctaSubtitle || "Reach out anytime.\nI'm happy to answer questions and talk through your next move.";
 
   return (
     <motion.section
@@ -450,10 +454,10 @@ const ClosingCTA = () => {
       className="py-24 px-6 bg-[#E76F51]"
     >
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-5xl font-bold text-white mb-6 font-serif">
+        <h2 className="text-5xl font-bold text-white mb-6 font-serif whitespace-pre-line">
           {ctaTitle}
         </h2>
-        <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+        <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto whitespace-pre-line">
           {ctaSubtitle}
         </p>
         <Link

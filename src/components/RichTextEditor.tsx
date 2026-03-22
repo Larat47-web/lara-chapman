@@ -1,10 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
     Bold, Italic, Underline, Strikethrough, List, ListOrdered, Link as LinkIcon,
     Image as ImageIcon, Code, Quote, Heading1, Heading2, Heading3,
     Eye, EyeOff, X, Palette, AlignLeft, AlignCenter, AlignRight, AlignJustify,
-    Minus, Table, RotateCcw, RotateCw, Eraser, Highlighter, Type,
+    Minus, Table, RotateCcw, RotateCw, Highlighter,
     Heading4, Heading5, Heading6, Superscript, Subscript, FileCode
 } from 'lucide-react';
 
@@ -26,7 +26,7 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({ value, onChange, placeh
     const [showLinkModal, setShowLinkModal] = useState(false);
     const [showColorPicker, setShowColorPicker] = useState(false);
     const [showBgColorPicker, setShowBgColorPicker] = useState(false);
-    const [selectedColor, setSelectedColor] = useState('#ffffff');
+    const [selectedColor, setSelectedColor] = useState('#222222');
     const [selectedBgColor, setSelectedBgColor] = useState('#ffff00');
     const [tableRows, setTableRows] = useState(3);
     const [tableCols, setTableCols] = useState(3);
@@ -178,7 +178,8 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({ value, onChange, placeh
         setShowBgColorPicker(false);
     };
 
-    const toolbarSections = [
+    type ToolbarButton = { icon: React.ElementType; action: () => void; title: string; disabled?: boolean };
+    const toolbarSections: { name: string; buttons: ToolbarButton[] }[] = [
         {
             name: 'History',
             buttons: [
@@ -268,8 +269,8 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({ value, onChange, placeh
                                 disabled={button.disabled}
                                 title={button.title}
                                 className={`p-2 rounded transition-colors ${button.disabled
-                                        ? 'opacity-30 cursor-not-allowed'
-                                        : 'hover:bg-white/10'
+                                    ? 'opacity-30 cursor-not-allowed'
+                                    : 'hover:bg-white/10'
                                     }`}
                             >
                                 <button.icon className="w-4 h-4 text-gray-300" />

@@ -9,7 +9,7 @@ import Sell from './pages/Sell'
 import Neighborhoods from './pages/Neighborhoods'
 import Resources from './pages/Resources'
 import Contact from './pages/Contact'
-import Calculators from './pages/Calculators'
+import FAQ from './pages/FAQ'
 
 // Admin imports
 import AdminLogin from './pages/admin/AdminLogin'
@@ -56,11 +56,11 @@ function App() {
         <Route path="/sell" element={<Layout><Sell /></Layout>} />
         <Route path="/neighborhoods" element={<Layout><Neighborhoods /></Layout>} />
         <Route path="/neighborhoods/:slug" element={<Layout><Neighborhoods /></Layout>} />
-        <Route path="/calculators" element={<Layout><Calculators /></Layout>} />
         <Route path="/resources" element={<Layout><Resources /></Layout>} />
         <Route path="/blog" element={<Layout><Blog /></Layout>} />
         <Route path="/blog/:slug" element={<Layout><BlogPost /></Layout>} />
         <Route path="/contact" element={<Layout><Contact /></Layout>} />
+        <Route path="/faq" element={<Layout><FAQ /></Layout>} />
       </Routes>
     </Router>
   )

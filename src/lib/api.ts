@@ -119,6 +119,11 @@ export interface SiteContent {
         ctaButtonUrl: string;
         resourcesTitle: string;
         resourcesSubtitle: string;
+        faqTitle: string;
+        faqSubtitle: string;
+        faqs: Array<{ question: string; answer: string }>;
+        commitmentTitle: string;
+        commitmentPoints: string[];
         steps: Array<{ icon: string; title: string; text: string }>;
         resources: Array<{ icon: string; title: string; description: string; buttonText: string; buttonUrl: string; isExternal: boolean; isDownload: boolean }>;
     };

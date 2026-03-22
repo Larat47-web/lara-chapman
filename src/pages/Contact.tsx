@@ -8,7 +8,7 @@ const Contact = () => {
 
   // Get dynamic content with fallbacks
   const pageTitle = content?.contact?.pageTitle || "Let's Connect";
-  const pageSubtitle = content?.contact?.pageSubtitle || "Ready to start your real estate journey? I'm here to help with all your buying, selling, and investing needs.";
+  const pageSubtitle = content?.contact?.pageSubtitle || "Have a question about buying, selling, or relocating to Phoenix?\nSend me a message and I'll get back to you quickly.";
   const formTitle = content?.contact?.formTitle || 'Send Me a Message';
   const profileBlurb = content?.contact?.profileBlurb || "I'm always available to help with your real estate questions. Whether you're buying, selling, or just exploring your options, I'd love to hear from you.";
   const phone = content?.contact?.phone || '(602) 405-8002';
@@ -47,7 +47,7 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h1 className="text-6xl font-bold text-[#333333] mb-6 font-serif">{pageTitle}</h1>
-          <p className="text-xl text-[#555555] max-w-2xl mx-auto">
+          <p className="text-xl text-[#555555] max-w-2xl mx-auto whitespace-pre-line">
             {pageSubtitle}
           </p>
         </motion.div>
