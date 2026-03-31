@@ -10,6 +10,7 @@ import Neighborhoods from './pages/Neighborhoods'
 import Resources from './pages/Resources'
 import Contact from './pages/Contact'
 import FAQ from './pages/FAQ'
+import Calculators from './pages/Calculators'
 
 // Admin imports
 import AdminLogin from './pages/admin/AdminLogin'
@@ -61,6 +62,7 @@ function App() {
         <Route path="/blog/:slug" element={<Layout><BlogPost /></Layout>} />
         <Route path="/contact" element={<Layout><Contact /></Layout>} />
         <Route path="/faq" element={<Layout><FAQ /></Layout>} />
+        <Route path="/calculators" element={<Layout><Calculators /></Layout>} />
       </Routes>
     </Router>
   )
