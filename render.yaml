@@ -27,7 +27,6 @@ services:
   - type: web
     name: lara-chapman-frontend
     runtime: static
-    region: oregon
     plan: free
     branch: main
     buildCommand: npm install && npm run build
